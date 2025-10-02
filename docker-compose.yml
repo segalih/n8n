@@ -18,6 +18,9 @@ services:
       - n8n_data:/home/node/.n8n
     networks:
       - n8n_network
+    dns:
+      - 1.1.1.1   # Cloudflare
+      - 8.8.8.8   # Google
 
 volumes:
   n8n_data:
